@@ -43,7 +43,7 @@
     .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
     .card{background:linear-gradient(180deg,rgba(17,24,39,.85),rgba(15,23,42,.85));border:1px solid rgba(148,163,184,.12);border-radius:16px;overflow:hidden;text-align:center;transition:transform .3s ease,box-shadow .3s ease}
     .card:hover{transform:translateY(-4px);box-shadow:0 6px 20px rgba(212,175,55,.25)}
-    .card img{width:100%;height:220px;object-fit:cover;display:block}
+    .card img{width:100%;height:auto;object-fit:contain;display:block;background:#000}
     .card h3{margin:12px 0 4px}
     .muted{color:var(--muted)}
     footer{border-top:1px solid rgba(148,163,184,.12);padding:28px 0 48px;color:var(--muted);text-align:center}
@@ -79,7 +79,7 @@
       <h2>关于我 · About</h2>
       <div class="twocol">
         <div>
-          <p class="muted">张梦菲，作曲家与研究者，现就读于佛罗伦萨音乐学院。作品曾于纽约林肯中心、意大利伽利略博物馆等地演出，探索音乐、科技与人文之间的跨界对话。其创作致力于通过声音与视觉的多维融合，表达人类感知与情感的共鸣。</p>
+          <p class="muted">张梦菲，作曲家与研究者，现就读于佛罗伦萨音乐学院。作品曾于纽约林肯中心、意大利伽利略博物馆等地演出，探索音乐、科技与人文之间的跨界对话。</p>
           <ul>
             <li>🎓 硕士｜佛罗伦萨音乐学院 Composition</li>
             <li>🏆 获奖｜Prokofiev International · New Work Award</li>
@@ -109,9 +109,7 @@
       <h2>联系我 · Contact</h2>
       <p class="muted" style="text-align:center;line-height:1.8">
         📧 邮箱：<a href="mailto:mengfei.zhang@stud.consfi.it">mengfei.zhang@stud.consfi.it</a><br>
-        🎓 Instagram: <a href="https://www.instagram.com/mengfei.zhang.music" target="_blank">@mengfei.zhang.music</a><br>
-        🌸 小红书 / 微博：<strong>张梦菲 composer</strong><br>
-        💼 LinkedIn: <a href="https://www.linkedin.com/in/mengfei-zhang-composer" target="_blank">mengfei-zhang-composer</a>
+        🌸 小红书 / 微博：<strong>张梦菲 composer</strong>
       </p>
     </section>
   </main>
@@ -127,4 +125,3 @@
   </script>
 </body>
 </html>
-
