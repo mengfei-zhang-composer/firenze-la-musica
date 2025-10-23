@@ -3,37 +3,36 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>张梦菲｜作曲家・研究者</title>
-  <meta name="description" content="作曲 · 教学 · 研究｜张梦菲的个人网站" />
-  <meta property="og:title" content="张梦菲｜作曲家・研究者" />
-  <meta property="og:description" content="作曲 · 教学 · 研究｜张梦菲的个人网站" />
-  <meta property="og:type" content="website" />
-  <!-- og:image 使用你仓库中的文件名（含空格，需 URL 编码 %20） -->
-  <meta property="og:image" content="award%20prokofiev.jpg" />
-  <meta name="theme-color" content="#0f172a" />
-  <link rel="icon" type="image/png" href="logo.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <title>张梦菲｜作曲家・研究者（安全模式）</title>
+  <meta name="theme-color" content="#ffffff" />
   <style>
-    :root{--bg:#0b1020;--panel:#0f172a;--muted:#94a3b8;--text:#e2e8f0;--brand:#d4af37;--accent:#60a5fa}
-    *{box-sizing:border-box}
-    html,body{margin:0;padding:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,Helvetica,sans-serif;background:linear-gradient(160deg,#0b1020 0%,#111827 100%);color:var(--text)}
-    a{color:var(--accent);text-decoration:none}
-    a:hover{text-decoration:underline}
-    .container{max-width:1100px;margin:0 auto;padding:0 20px}
-    header{position:sticky;top:0;backdrop-filter:saturate(120%) blur(8px);background:rgba(11,16,32,.6);border-bottom:1px solid rgba(148,163,184,.1);z-index:30}
-    .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
-    .brand-wrap{display:flex;gap:10px;align-items:center}
-    .brand-logo{width:40px;height:40px;border-radius:8px;object-fit:contain;background:#fff;padding:4px}
-    .nav a.brand{font-weight:800;letter-spacing:.3px;color:#fff}
-    .menu{display:flex;gap:22px}
-    .menu a{color:var(--text);opacity:.9}
-    .menu a:hover{opacity:1}
-    .hero{text-align:center;padding:96px 0 72px;border-bottom:1px solid rgba(148,163,184,.12)}
-    .hero img.logo-hero{max-width:140px;margin-bottom:20px;border-radius:14px;background:#fff;padding:10px}
-    .hero h1{font-size:clamp(28px,4vw,44px);line-height:1.1;margin:0 0 16px}
-    .hero p.lead{font-size:clamp(16px,2.2vw,20px);color:var(--muted);max-width:760px;margin:0 auto}
-    .btns{display:flex;gap:12px;margin-top:22px;justify-content:center}
-    .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:10px;border:1px solid rgba(148,163,184,.22);background:linear-gradient(180deg,rgba(212,175,55
+    /* 极简，不用外部字体与滤镜，便于定位问题 */
+    body { margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, Helvetica, sans-serif; background:#fafafa; color:#111; }
+    .wrap { max-width: 900px; margin: 0 auto; padding: 20px; }
+    h1 { margin: 16px 0; }
+    .grid { display: grid; grid-template-columns: 1fr; gap: 16px; }
+    img { max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px; }
+    .muted { color:#555; }
+    .badge { display:inline-block; padding:4px 8px; border:1px solid #ccc; border-radius:6px; background:#fff; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="badge">安全模式 · 仅用于排查白屏</div>
+    <h1>你好，我是张梦菲</h1>
+    <p class="muted">如果你能看到这段文字，说明页面已经正常渲染。</p>
 
+    <h2>站点 Logo</h2>
+    <img src="logo.png" alt="logo" onerror="this.alt='logo 加载失败（检查文件名/大小写/路径）'">
+
+    <h2>个人照片</h2>
+    <img src="profile.jpg" alt="profile" onerror="this.alt='profile.jpg 加载失败'">
+
+    <h2>获奖图片</h2>
+    <!-- 注意文件名里空格需要 %20 -->
+    <img src="award%20prokofiev.jpg" alt="prokofiev award" onerror="this.alt='award prokofiev.jpg 加载失败'">
+
+    <p class="muted">如果上面任意一张图不显示，请核对仓库根目录是否存在对应文件；若你后来把文件重命名为不含空格版本，请把路径同步改为 <code>award-prokofiev.jpg</code>。</p>
+  </div>
+</body>
+</html>
