@@ -8,9 +8,9 @@
   <meta property="og:title" content="张梦菲｜作曲家・研究者" />
   <meta property="og:description" content="作曲 · 教学 · 研究｜张梦菲的个人网站" />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="Prokofiev International Award">
-
+  <meta property="og:image" content="images/award-prokofiev.jpg" />
   <meta name="theme-color" content="#0f172a" />
+  <link rel="icon" type="image/png" href="images/logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
@@ -29,11 +29,8 @@
     .menu{display:flex;gap:22px}
     .menu a{color:var(--text);opacity:.9}
     .menu a:hover{opacity:1}
-    .hamb{display:none}
-    @media (max-width:800px){.menu{display:none}.hamb{display:block}}
-    .mobile{display:none}
-    .hero{padding:96px 0 72px;border-bottom:1px solid rgba(148,163,184,.12);text-align:center}
-    .hero img.logo-hero{max-width:160px;margin-bottom:20px;border-radius:14px;background:#fff;padding:10px}
+    .hero{text-align:center;padding:96px 0 72px;border-bottom:1px solid rgba(148,163,184,.12)}
+    .hero img.logo-hero{max-width:140px;margin-bottom:20px;border-radius:14px;background:#fff;padding:10px}
     .hero h1{font-size:clamp(28px,4vw,44px);line-height:1.1;margin:0 0 16px}
     .hero p.lead{font-size:clamp(16px,2.2vw,20px);color:var(--muted);max-width:760px;margin:0 auto}
     .btns{display:flex;gap:12px;margin-top:22px;justify-content:center}
@@ -42,7 +39,7 @@
     h2{font-size:26px;margin:0 0 24px}
     .twocol{display:grid;grid-template-columns:1.1fr .9fr;gap:26px;align-items:center}
     @media (max-width:900px){.twocol{grid-template-columns:1fr;}}
-    .portrait{width:100%;max-width:400px;border-radius:14px;overflow:hidden;border:1px solid rgba(148,163,184,.15);margin:auto;display:block}
+    .portrait{width:100%;max-width:400px;border-radius:14px;border:2px solid rgba(212,175,55,.3);box-shadow:0 0 12px rgba(212,175,55,.2);margin:auto;display:block}
     .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
     .card{background:linear-gradient(180deg,rgba(17,24,39,.85),rgba(15,23,42,.85));border:1px solid rgba(148,163,184,.12);border-radius:16px;overflow:hidden;text-align:center}
     .card img{width:100%;height:220px;object-fit:cover;display:block}
@@ -70,7 +67,7 @@
     <section class="hero">
       <img class="logo-hero" src="images/logo.png" alt="Firenze Musica logo">
       <h1>你好，我是 <span style="background:linear-gradient(45deg,var(--brand),var(--accent));-webkit-background-clip:text;background-clip:text;color:transparent">张梦菲</span></h1>
-      <p class="lead">作曲家、研究者。融合艺术与科技的音乐创作者，作品涵盖交响、室内乐及跨媒体音乐。</p>
+      <p class="lead">作曲家、研究者。融合艺术与科技的音乐创作者，作品涵盖交响、室内乐与跨媒体艺术。</p>
       <div class="btns">
         <a class="btn" href="#works">查看作品与荣誉</a>
         <a class="btn" href="#contact">联系我</a>
@@ -85,7 +82,7 @@
           <ul>
             <li>🎓 硕士｜佛罗伦萨音乐学院 Composition</li>
             <li>🏆 获奖｜Prokofiev International · New Work Award</li>
-            <li>🎶 活动｜Lincoln Center Students Day 参演作曲</li>
+            <li>🎶 活动｜Lincoln Center Students Day 庆祝中国春节</li>
           </ul>
         </div>
         <div>
@@ -101,14 +98,14 @@
           <img src="images/award1.png" alt="Lincoln Center Students Day">
           <div class="body">
             <h3>Lincoln Center Students Day</h3>
-            <p class="muted">纽约林肯中心 · Students Day 音乐活动参演与原创作品展示。</p>
+            <p class="muted">纽约林肯中心庆祝中国春节活动 · 学生日特别演出。</p>
           </div>
         </div>
         <div class="card">
-          <img src="images/award2.jpg" alt="Prokofiev International Award">
+          <img src="images/award-prokofiev.jpg" alt="Prokofiev International Award">
           <div class="body">
             <h3>Prokofiev International · New Work Award</h3>
-            <p class="muted">荣获普罗科菲耶夫国际音乐比赛 “新作奖”。</p>
+            <p class="muted">荣获普罗科菲耶夫国际音乐比赛「新作奖」。</p>
           </div>
         </div>
       </div>
@@ -116,7 +113,10 @@
 
     <section id="contact">
       <h2>联系我 Contact</h2>
-      <p class="muted">📧 邮箱：<a href="mailto:you@example.com">you@example.com</a><br>🌐 社交媒体：@yourhandle</p>
+      <p class="muted">
+        📧 邮箱：<a href="mailto:mengfei.zhang@stud.consfi.it">mengfei.zhang@stud.consfi.it</a><br>
+        🌸 小红书 / 微博：<strong>张梦菲 composer</strong>
+      </p>
     </section>
   </main>
 
@@ -132,3 +132,5 @@
   </script>
 </body>
 </html>
+
+
