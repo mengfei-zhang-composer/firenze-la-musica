@@ -3,167 +3,111 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>张梦菲｜个人网站</title>
+  <title>张梦菲｜作曲家・研究者</title>
   <meta name="description" content="作曲 · 教学 · 研究｜张梦菲的个人网站" />
-  <meta property="og:title" content="张梦菲｜个人网站" />
+  <meta property="og:title" content="张梦菲｜作曲家・研究者" />
   <meta property="og:description" content="作曲 · 教学 · 研究｜张梦菲的个人网站" />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://picsum.photos/1200/630" />
+  <meta property="og:image" content="images/award2.jpg" />
   <meta name="theme-color" content="#0f172a" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
-    :root{--bg:#0b1020;--panel:#0f172a;--muted:#94a3b8;--text:#e2e8f0;--brand:#60a5fa;--accent:#a78bfa}
+    :root{--bg:#0b1020;--panel:#0f172a;--muted:#94a3b8;--text:#e2e8f0;--brand:#d4af37;--accent:#60a5fa}
     *{box-sizing:border-box}
     html,body{margin:0;padding:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,Helvetica,sans-serif;background:linear-gradient(160deg,#0b1020 0%,#111827 100%);color:var(--text)}
-    a{color:var(--brand);text-decoration:none}
+    a{color:var(--accent);text-decoration:none}
     a:hover{text-decoration:underline}
     .container{max-width:1100px;margin:0 auto;padding:0 20px}
     header{position:sticky;top:0;backdrop-filter:saturate(120%) blur(8px);background:rgba(11,16,32,.6);border-bottom:1px solid rgba(148,163,184,.1);z-index:30}
     .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+    .brand-wrap{display:flex;gap:10px;align-items:center}
+    .brand-logo{width:40px;height:40px;border-radius:8px;object-fit:contain;background:#fff;padding:4px}
     .nav a.brand{font-weight:800;letter-spacing:.3px;color:#fff}
     .menu{display:flex;gap:22px}
     .menu a{color:var(--text);opacity:.9}
     .menu a:hover{opacity:1}
     .hamb{display:none}
-    @media (max-width:800px){
-      .menu{display:none}
-      .hamb{display:block}
-    }
+    @media (max-width:800px){.menu{display:none}.hamb{display:block}}
     .mobile{display:none}
-    .hero{padding:96px 0 72px;border-bottom:1px solid rgba(148,163,184,.12)}
+    .hero{padding:96px 0 72px;border-bottom:1px solid rgba(148,163,184,.12);text-align:center}
+    .hero img.logo-hero{max-width:160px;margin-bottom:20px;border-radius:14px;background:#fff;padding:10px}
     .hero h1{font-size:clamp(28px,4vw,44px);line-height:1.1;margin:0 0 16px}
-    .hero p.lead{font-size:clamp(16px,2.2vw,20px);color:var(--muted);max-width:760px;margin:0}
-    .badge{display:inline-block;padding:6px 12px;border:1px solid rgba(148,163,184,.2);border-radius:999px;color:var(--muted);font-size:13px;margin-bottom:14px}
-    .btns{display:flex;gap:12px;margin-top:22px}
-    .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:10px;border:1px solid rgba(148,163,184,.22);background:linear-gradient(180deg,rgba(96,165,250,.16),rgba(167,139,250,.12));color:#fff}
-    .btn.secondary{background:transparent}
+    .hero p.lead{font-size:clamp(16px,2.2vw,20px);color:var(--muted);max-width:760px;margin:0 auto}
+    .btns{display:flex;gap:12px;margin-top:22px;justify-content:center}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:10px;border:1px solid rgba(148,163,184,.22);background:linear-gradient(180deg,rgba(212,175,55,.18),rgba(96,165,250,.12));color:#fff}
     section{padding:72px 0}
     h2{font-size:26px;margin:0 0 24px}
-    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-    @media (max-width:900px){.grid{grid-template-columns:1fr 1fr}}
-    @media (max-width:640px){.grid{grid-template-columns:1fr}}
-    .card{background:linear-gradient(180deg,rgba(17,24,39,.85),rgba(15,23,42,.85));border:1px solid rgba(148,163,184,.12);border-radius:16px;overflow:hidden}
-    .card img{width:100%;height:180px;object-fit:cover;display:block;filter:saturate(1.1)}
-    .card .body{padding:16px}
-    .card h3{margin:0 0 8px;font-size:18px}
-    .muted{color:var(--muted)}
     .twocol{display:grid;grid-template-columns:1.1fr .9fr;gap:26px;align-items:center}
     @media (max-width:900px){.twocol{grid-template-columns:1fr;}}
-    .list{display:grid;gap:12px}
-    .list-item{display:flex;gap:10px}
-    .list-item .dot{width:8px;height:8px;border-radius:50%;margin-top:9px;background:linear-gradient(45deg,var(--brand),var(--accent))}
+    .portrait{width:100%;max-width:400px;border-radius:14px;overflow:hidden;border:1px solid rgba(148,163,184,.15);margin:auto;display:block}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
+    .card{background:linear-gradient(180deg,rgba(17,24,39,.85),rgba(15,23,42,.85));border:1px solid rgba(148,163,184,.12);border-radius:16px;overflow:hidden;text-align:center}
+    .card img{width:100%;height:220px;object-fit:cover;display:block}
+    .card h3{margin:12px 0 4px}
+    .muted{color:var(--muted)}
     footer{border-top:1px solid rgba(148,163,184,.12);padding:28px 0 48px;color:var(--muted)}
-    .pill{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(96,165,250,.18);border:1px solid rgba(148,163,184,.2);font-size:12px}
-    .lang{display:flex;gap:10px;align-items:center}
-    .contact{display:grid;gap:12px}
-    .contact input,.contact textarea{width:100%;padding:12px 14px;border-radius:12px;border:1px solid rgba(148,163,184,.2);background:rgba(2,6,23,.5);color:#fff}
-    .contact button{padding:12px 16px;border-radius:12px;border:1px solid rgba(148,163,184,.22);background:linear-gradient(180deg,rgba(96,165,250,.16),rgba(167,139,250,.12));color:#fff}
-    .note{font-size:12px;color:var(--muted)}
   </style>
 </head>
 <body>
   <header>
     <div class="container nav">
-      <a href="#top" class="brand">张梦菲</a>
-      <nav class="menu" aria-label="主导航">
+      <div class="brand-wrap">
+        <img class="brand-logo" src="images/logo.png" alt="Firenze Musica logo">
+        <a href="#top" class="brand">张梦菲</a>
+      </div>
+      <nav class="menu">
         <a href="#about">关于</a>
-        <a href="#works">作品</a>
-        <a href="#teaching">教学</a>
+        <a href="#works">作品与荣誉</a>
         <a href="#contact">联系</a>
       </nav>
-      <button class="hamb" aria-label="打开菜单" onclick="document.querySelector('.mobile').style.display='block'">☰</button>
-    </div>
-    <div class="mobile" onclick="this.style.display='none'">
-      <div class="container" style="padding:10px 0 16px;display:grid;gap:10px">
-        <a href="#about">关于</a>
-        <a href="#works">作品</a>
-        <a href="#teaching">教学</a>
-        <a href="#contact">联系</a>
-      </div>
     </div>
   </header>
 
-  <main id="top" class="container">
+  <main class="container">
     <section class="hero">
-      <span class="badge">作曲 · 教学 · 研究｜Personal Website</span>
-      <h1>你好，我是 <span style="background:linear-gradient(45deg,var(--brand),var(--accent));-webkit-background-clip:text;background-clip:text;color:transparent">你的名字</span>。欢迎来到我的网站。</h1>
-      <p class="lead">这里展示我的最新作品、课程与研究项目。此模板是一页式响应式网页，适合快速上线，你可以直接改文字与图片即可发布。</p>
+      <img class="logo-hero" src="images/logo.png" alt="Firenze Musica logo">
+      <h1>你好，我是 <span style="background:linear-gradient(45deg,var(--brand),var(--accent));-webkit-background-clip:text;background-clip:text;color:transparent">张梦菲</span></h1>
+      <p class="lead">作曲家、研究者。融合艺术与科技的音乐创作者，作品涵盖交响、室内乐及跨媒体音乐。</p>
       <div class="btns">
-        <a class="btn" href="#works">查看作品 →</a>
-        <a class="btn secondary" href="#contact">联系我</a>
+        <a class="btn" href="#works">查看作品与荣誉</a>
+        <a class="btn" href="#contact">联系我</a>
       </div>
     </section>
 
     <section id="about">
+      <h2>关于我 About</h2>
       <div class="twocol">
         <div>
-          <h2>关于我 About</h2>
-          <p class="muted">在这里写一段简介：教育背景、获奖、研究方向与音乐风格。可双语呈现，便于国际合作与招生。</p>
-          <div class="list" style="margin-top:12px">
-            <div class="list-item"><span class="dot"></span><div>硕士｜佛罗伦萨音乐学院 · Composition</div></div>
-            <div class="list-item"><span class="dot"></span><div>获奖｜International Composition Awards（示例）</div></div>
-            <div class="list-item"><span class="dot"></span><div>研究｜Opera dramaturgy · AI × Music · Biofeedback</div></div>
-          </div>
+          <p class="muted">张梦菲，作曲家与研究者，现就读于佛罗伦萨音乐学院。作品曾于纽约林肯中心、意大利伽利略博物馆等地演出，探索音乐、科技与人文之间的跨界对话。</p>
+          <ul>
+            <li>🎓 硕士｜佛罗伦萨音乐学院 Composition</li>
+            <li>🏆 获奖｜Prokofiev International · New Work Award</li>
+            <li>🎶 活动｜Lincoln Center Students Day 参演作曲</li>
+          </ul>
         </div>
         <div>
-          <div class="card">
-            <img src="https://picsum.photos/800/450" alt="封面示意">
-            <div class="body">
-              <div class="pill">最近动态</div>
-              <h3 style="margin-top:10px">新作《Notte stellata e vento》将于 2025 上演</h3>
-              <p class="muted">在此放置一条新闻或演出预告。也可嵌社交媒体链接。</p>
-            </div>
-          </div>
+          <img class="portrait" src="images/profile.jpg" alt="张梦菲肖像">
         </div>
       </div>
     </section>
 
     <section id="works">
-      <h2>代表作品 Works</h2>
+      <h2>作品与荣誉 Works & Awards</h2>
       <div class="grid">
-        <article class="card">
-          <img src="https://picsum.photos/seed/a/800/450" alt="作品图 A">
-          <div class="body">
-            <h3>《Silk Road Phantom》</h3>
-            <p class="muted">为大型管弦乐队而作，融合东方音阶与现代织体。<br>试听 / Score / Program note 链接可放此。</p>
-          </div>
-        </article>
-        <article class="card">
-          <img src="https://picsum.photos/seed/b/800/450" alt="作品图 B">
-          <div class="body">
-            <h3>《Nel cuore degli hutong》</h3>
-            <p class="muted">室内乐与电子的对话，探索城市记忆。</p>
-          </div>
-        </article>
-        <article class="card">
-          <img src="https://picsum.photos/seed/c/800/450" alt="作品图 C">
-          <div class="body">
-            <h3>《I dodici segni dello zodiaco》</h3>
-            <p class="muted">以星座意象为驱动的多媒体音乐剧场。</p>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section id="teaching">
-      <h2>钢琴 / 作曲 教学 Teaching</h2>
-      <div class="twocol">
         <div class="card">
+          <img src="images/award1.png" alt="Lincoln Center Students Day">
           <div class="body">
-            <h3>课程亮点 Highlights</h3>
-            <div class="list" style="margin-top:10px">
-              <div class="list-item"><span class="dot"></span><div>从“会弹”到“会演”：技术与舞台心理双突破</div></div>
-              <div class="list-item"><span class="dot"></span><div>视奏、配器与总谱阅读｜适合升学与比赛</div></div>
-              <div class="list-item"><span class="dot"></span><div>线上/线下均可 · 接受零基础</div></div>
-            </div>
+            <h3>Lincoln Center Students Day</h3>
+            <p class="muted">纽约林肯中心 · Students Day 音乐活动参演与原创作品展示。</p>
           </div>
         </div>
         <div class="card">
+          <img src="images/award2.jpg" alt="Prokofiev International Award">
           <div class="body">
-            <h3>费用与排期</h3>
-            <p class="muted">请通过下方联系表或邮件咨询，支持包课与定制课程。</p>
+            <h3>Prokofiev International · New Work Award</h3>
+            <p class="muted">荣获普罗科菲耶夫国际音乐比赛 “新作奖”。</p>
           </div>
         </div>
       </div>
@@ -171,31 +115,14 @@
 
     <section id="contact">
       <h2>联系我 Contact</h2>
-      <div class="twocol">
-        <form class="contact" onsubmit="event.preventDefault(); alert('感谢你的留言！请将此表单改为第三方表单或邮件链接。');">
-          <input type="text" placeholder="张梦菲 / Zhang Mengfei" required>
-          <input type="email" placeholder="邮箱 / Email" required>
-          <textarea rows="5" placeholder="留言 / Message"></textarea>
-          <button type="submit">发送</button>
-          <p class="note">注：静态网页无法直接收表单。发布前可把按钮改成 <a href="mailto:you@example.com?subject=网站咨询">mailto:you@example.com</a>，或接入 Netlify Forms / Formspree。</p>
-        </form>
-        <div>
-          <div class="card">
-            <div class="body">
-              <h3>社交 / 联系方式</h3>
-              <p class="muted">Email：<a href="mengfei.zhang@stud.consfi.it">you@example.com</a><br>Instagram / 微博 / B站 / 小红书：@张梦菲 composer
-              <p class="muted">地址（选填）· 里程碑 · 新闻稿链接等</p>
-            </div>
-          </div>
-        </div>
-      </div>
+      <p class="muted">📧 邮箱：<a href="mailto:you@example.com">you@example.com</a><br>🌐 社交媒体：@yourhandle</p>
     </section>
   </main>
 
   <footer>
     <div class="container" style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px">
       <span>© <span id="y"></span> 张梦菲</span>
-      <div class="lang"><span class="pill">中文</span><span class="pill">Italiano</span><span class="pill">English</span></div>
+      <div><span>Firenze Musica</span></div>
     </div>
   </footer>
 
